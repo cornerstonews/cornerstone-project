@@ -146,7 +146,13 @@
                             </manifestEntries>
                         </archive>
                         <failOnMissingWebXml>false</failOnMissingWebXml>
-                        <packagingExcludes>**/log4j2.xml</packagingExcludes>
+                        <packagingExcludes>
+                            **/log4j.properties,
+                            **/log4j2.xml,
+                            **/log4j2.properties,
+                            **/application.yaml
+                            **/persistence.xml
+                        </packagingExcludes>
                     </configuration>
                 </plugin>
                 <plugin>
