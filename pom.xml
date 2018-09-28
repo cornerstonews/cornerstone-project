@@ -35,6 +35,7 @@
         <module>../cornerstone-persistence</module>
         <module>../cornerstone-webservice-persistence</module>
         <module>../cornerstone-validation</module>
+        <module>../cornerstone-websocket-proxy</module>
     </modules>
 
     <properties>
