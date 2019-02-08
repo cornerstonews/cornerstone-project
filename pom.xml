@@ -30,6 +30,7 @@
         </snapshotRepository>
     </distributionManagement>
 
+<!--
     <modules>
         <module>../cornerstone-webservice</module>
         <module>../cornerstone-persistence</module>
@@ -37,6 +38,7 @@
         <module>../cornerstone-validation</module>
         <module>../cornerstone-websocket-proxy</module>
     </modules>
+-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
