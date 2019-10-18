@@ -52,7 +52,8 @@
         
         <jakarta.servlet-api.version>4.0.3</jakarta.servlet-api.version>
         <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
-        <!-- <jakarta.el-api.version>3.0.3</jakarta.el-api.version> -->
+        <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
+        <javax.el>3.0.0</javax.el>
         <jakarta.websocket-api.version>1.1.2</jakarta.websocket-api.version>
         <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
 
@@ -479,12 +480,22 @@
                 <version>${jjakarta.servlet-api.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- <dependency>
+            <!-- jakarta.el-api and javax.el are needed by hibernate-validator. -->
+            <!-- In a Java EE container, an EL implementation is already provided by the container. -->
+            <!-- In a Java SE environment, however, you have to add an implementation as compile dependency to your POM file. -->
+            <dependency>
                 <groupId>jakarta.el</groupId>
                 <artifactId>jakarta.el-api</artifactId>
                 <version>${jakarta.el-api.version}</version>
                 <scope>provided</scope>
-            </dependency> -->
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish</groupId>
+                <artifactId>javax.el</artifactId>
+                <version>${javax.el}</version>
+                <scope>provided</scope>
+            </dependency>
+            
 
             <dependency>
                 <groupId>jakarta.websocket</groupId>
