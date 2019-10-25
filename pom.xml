@@ -19,17 +19,16 @@
 
     <distributionManagement>
         <repository>
-            <id>releasesRepo</id>
+            <id>${releasesRepo}</id>
             <name>Maven2 release repository</name>
             <url>${releasesRepo.url}</url>
         </repository>
         <snapshotRepository>
-            <id>snapshotsRepo</id>
+            <id>${snapshotsRepo}</id>
             <name>Maven2 snapshot repository</name>
             <url>${snapshotsRepo.url}</url>
         </snapshotRepository>
     </distributionManagement>
-
 
     <modules>
         <module>../cornerstone-webservice</module>
