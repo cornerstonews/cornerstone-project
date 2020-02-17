@@ -30,6 +30,7 @@
         </snapshotRepository>
     </distributionManagement>
 
+<!--
     <modules>
         <module>../cornerstone-webservice</module>
         <module>../cornerstone-persistence</module>
@@ -42,7 +43,7 @@
         <module>../cornerstone-adb-websocket</module>
         <module>../cornerstone-adb-websocket-server</module>
     </modules>
-
+-->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
