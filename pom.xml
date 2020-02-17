@@ -57,8 +57,8 @@
         <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
 
         <jersey.version>2.30</jersey.version>
-        <eclipselink.version>2.7.4</eclipselink.version>
-        <hibernate-validator.version>6.0.17.Final</hibernate-validator.version>
+        <eclipselink.version>2.7.6</eclipselink.version>
+        <hibernate-validator.version>6.0.18.Final</hibernate-validator.version>
         <jackson-databind.version>2.10.0</jackson-databind.version>
         <jackson-dataformat-yaml.version>2.10.0</jackson-dataformat-yaml.version>
         <jjwt.version>0.9.1</jjwt.version>
@@ -79,13 +79,13 @@
         <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
         <maven.assembly.plugin>3.1.1</maven.assembly.plugin>
         <maven.javadoc.plugin>3.1.1</maven.javadoc.plugin>
-        <maven.checkstyle.plugin>3.1.0</maven.checkstyle.plugin>
+        <maven.checkstyle.plugin>3.1.1</maven.checkstyle.plugin>
         <maven.surefire.plugin>3.0.0-M3</maven.surefire.plugin>
         <surefire.security.argline />
         <surefire.coverage.argline />
         <maven.site.plugin>3.7.1</maven.site.plugin>
         <buildnumber.maven.plugin>1.4</buildnumber.maven.plugin>
-        <checkstyle.version>8.23</checkstyle.version>
+        <checkstyle.version>8.29</checkstyle.version>
         <spotbugs.maven.plugin>3.1.12.2</spotbugs.maven.plugin>
         <spotbugs.skip>false</spotbugs.skip>
 
