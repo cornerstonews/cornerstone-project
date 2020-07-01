@@ -65,7 +65,7 @@
         <commons-codec.version>1.13</commons-codec.version>
         <io.dropwizard.metrics.version>4.1.0</io.dropwizard.metrics.version>
         <jbcrypt.version>0.4</jbcrypt.version>
-        <log4j.version>2.12.1</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <junit.jupiter.version>5.0.3</junit.jupiter.version>
         <junit.platform.version>1.0.3</junit.platform.version>
 
