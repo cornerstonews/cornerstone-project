@@ -35,6 +35,7 @@
         <module>../cornerstone-config</module>
         <module>../cornerstone-webservice-persistence</module>
         <module>../cornerstone-validation</module>
+        <module>../cornerstone-ssl</module>
         <module>../cornerstone-websocket-proxy</module>
         <module>../cornerstone-websocket-server</module>
         <module>../cornerstone-adb-driver</module>
@@ -61,7 +62,7 @@
         <jackson-dataformat-yaml.version>2.11.1</jackson-dataformat-yaml.version>
         <jjwt.version>0.9.1</jjwt.version>
         <commons-codec.version>1.14</commons-codec.version>
-        <io.dropwizard.metrics.version>4.1.11</io.dropwizard.metrics.version>
+        <io.dropwizard.metrics.version>4.1.12.1</io.dropwizard.metrics.version>
         <jbcrypt.version>0.4</jbcrypt.version>
         <log4j.version>2.13.3</log4j.version>
         <junit.jupiter.version>5.6.2</junit.jupiter.version>
@@ -404,11 +405,7 @@
                 <scope>compile</scope>
                 <exclusions>
                     <exclusion>
-                        <groupId>javax.validation</groupId>
-                        <artifactId>validation-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.hibernate</groupId>
+                        <groupId>org.hibernate.validator</groupId>
                         <artifactId>hibernate-validator</artifactId>
                     </exclusion>
                 </exclusions>
@@ -512,6 +509,12 @@
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
                 <scope>compile</scope>
+                <exclusions>
+	               <exclusion>
+	                   <groupId>com.fasterxml.jackson.core</groupId>
+	                   <artifactId>jackson-databind</artifactId>
+	               </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.mindrot</groupId>
@@ -549,6 +552,12 @@
                 <artifactId>metrics-json</artifactId>
                 <version>${io.dropwizard.metrics.version}</version>
                 <scope>compile</scope>
+                <exclusions>
+			        <exclusion>
+			            <groupId>com.fasterxml.jackson.core</groupId>
+			            <artifactId>jackson-databind</artifactId>
+			        </exclusion>
+			    </exclusions>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
