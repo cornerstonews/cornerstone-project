@@ -6,14 +6,14 @@
     <artifactId>cornerstone-project</artifactId>
     <packaging>pom</packaging>
     <name>cornerstone-project</name>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <description>Library to build Webservice project based on Jersey REST Framework</description>
 
     <scm>
         <connection>scm:git:git@github.com:cornerstonews/cornerstone-project.git</connection>
         <developerConnection>scm:git:git@github.com:cornerstonews/cornerstone-project.git</developerConnection>
         <url>https://github.com/cornerstonews/cornerstone-project</url>
-        <tag>cornerstone-project-1.1.0</tag>
+        <tag>cornerstone-project-1.2.0</tag>
     </scm>
 
     <distributionManagement>
@@ -36,6 +36,7 @@
         <module>../cornerstone-config</module>
         <module>../cornerstone-webservice-persistence</module>
         <module>../cornerstone-validation</module>
+        <module>../cornerstone-ssl</module>
         <module>../cornerstone-websocket-proxy</module>
         <module>../cornerstone-websocket-server</module>
         <module>../cornerstone-adb-driver</module>
@@ -49,44 +50,44 @@
 
         <jdk.version>11</jdk.version>
         
-        <jakarta.servlet-api.version>4.0.3</jakarta.servlet-api.version>
+        <jakarta.servlet-api.version>4.0.4</jakarta.servlet-api.version>
         <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
         <jakarta.el-api.version>3.0.3</jakarta.el-api.version>
-        <javax.el>3.0.0</javax.el>
+        <jakarta.el>3.0.3</jakarta.el>
         <jakarta.websocket-api.version>1.1.2</jakarta.websocket-api.version>
-        <jakarta.xml.bind-api.version>2.3.2</jakarta.xml.bind-api.version>
+        <jakarta.xml.bind-api.version>2.3.3</jakarta.xml.bind-api.version>
 
-        <jersey.version>2.30</jersey.version>
-        <eclipselink.version>2.7.6</eclipselink.version>
-        <hibernate-validator.version>6.0.18.Final</hibernate-validator.version>
-        <jackson-databind.version>2.10.0</jackson-databind.version>
-        <jackson-dataformat-yaml.version>2.10.0</jackson-dataformat-yaml.version>
+        <jersey.version>2.31</jersey.version>
+        <eclipselink.version>2.7.7</eclipselink.version>
+        <hibernate-validator.version>6.1.5.Final</hibernate-validator.version>
+        <jackson-databind.version>2.11.1</jackson-databind.version>
+        <jackson-dataformat-yaml.version>2.11.1</jackson-dataformat-yaml.version>
         <jjwt.version>0.9.1</jjwt.version>
-        <commons-codec.version>1.13</commons-codec.version>
-        <io.dropwizard.metrics.version>4.1.0</io.dropwizard.metrics.version>
+        <commons-codec.version>1.14</commons-codec.version>
+        <io.dropwizard.metrics.version>4.1.12.1</io.dropwizard.metrics.version>
         <jbcrypt.version>0.4</jbcrypt.version>
-        <log4j.version>2.12.1</log4j.version>
-        <junit.jupiter.version>5.0.3</junit.jupiter.version>
-        <junit.platform.version>1.0.3</junit.platform.version>
+        <log4j.version>2.13.3</log4j.version>
+        <junit.jupiter.version>5.6.2</junit.jupiter.version>
+        <junit.platform.version>1.6.2</junit.platform.version>
 
-        <maven.enforcer.plugin>3.0.0-M2</maven.enforcer.plugin>
+        <maven.enforcer.plugin>3.0.0-M3</maven.enforcer.plugin>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
-        <maven.jar.plugin.version>3.1.2</maven.jar.plugin.version>
-        <maven.war.plugin.version>3.2.3</maven.war.plugin.version>
+        <maven.jar.plugin.version>3.2.0</maven.jar.plugin.version>
+        <maven.war.plugin.version>3.3.1</maven.war.plugin.version>
         <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
         <maven.build.timestamp.format>yyyyMMdd.HHmmss</maven.build.timestamp.format>
         <maven.antrun.plugin.version>1.8</maven.antrun.plugin.version>
-        <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
-        <maven.assembly.plugin>3.1.1</maven.assembly.plugin>
-        <maven.javadoc.plugin>3.1.1</maven.javadoc.plugin>
+        <maven.dependency.plugin.version>3.1.2</maven.dependency.plugin.version>
+        <maven.assembly.plugin>3.3.0</maven.assembly.plugin>
+        <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
         <maven.checkstyle.plugin>3.1.1</maven.checkstyle.plugin>
-        <maven.surefire.plugin>3.0.0-M3</maven.surefire.plugin>
+        <maven.surefire.plugin>3.0.0-M5</maven.surefire.plugin>
         <surefire.security.argline />
         <surefire.coverage.argline />
-        <maven.site.plugin>3.7.1</maven.site.plugin>
+        <maven.site.plugin>3.9.1</maven.site.plugin>
         <buildnumber.maven.plugin>1.4</buildnumber.maven.plugin>
-        <checkstyle.version>8.29</checkstyle.version>
-        <spotbugs.maven.plugin>3.1.12.2</spotbugs.maven.plugin>
+        <checkstyle.version>8.35</checkstyle.version>
+        <spotbugs.maven.plugin>4.0.6</spotbugs.maven.plugin>
         <spotbugs.skip>false</spotbugs.skip>
 
     </properties>
@@ -406,11 +407,7 @@
                 <scope>compile</scope>
                 <exclusions>
                     <exclusion>
-                        <groupId>javax.validation</groupId>
-                        <artifactId>validation-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.hibernate</groupId>
+                        <groupId>org.hibernate.validator</groupId>
                         <artifactId>hibernate-validator</artifactId>
                     </exclusion>
                 </exclusions>
@@ -490,8 +487,8 @@
             </dependency>
             <dependency>
                 <groupId>org.glassfish</groupId>
-                <artifactId>javax.el</artifactId>
-                <version>${javax.el}</version>
+                <artifactId>jakarta.el</artifactId>
+                <version>${jakarta.el}</version>
                 <scope>provided</scope>
             </dependency>
             
@@ -514,6 +511,12 @@
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
                 <scope>compile</scope>
+                <exclusions>
+	               <exclusion>
+	                   <groupId>com.fasterxml.jackson.core</groupId>
+	                   <artifactId>jackson-databind</artifactId>
+	               </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.mindrot</groupId>
@@ -551,6 +554,12 @@
                 <artifactId>metrics-json</artifactId>
                 <version>${io.dropwizard.metrics.version}</version>
                 <scope>compile</scope>
+                <exclusions>
+			        <exclusion>
+			            <groupId>com.fasterxml.jackson.core</groupId>
+			            <artifactId>jackson-databind</artifactId>
+			        </exclusion>
+			    </exclusions>
             </dependency>
             <dependency>
                 <groupId>io.dropwizard.metrics</groupId>
