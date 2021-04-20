@@ -6,14 +6,14 @@
     <artifactId>cornerstone-project</artifactId>
     <packaging>pom</packaging>
     <name>cornerstone-project</name>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <description>Library to build Webservice project based on Jersey REST Framework</description>
 
     <scm>
         <connection>scm:git:git@github.com:cornerstonews/cornerstone-project.git</connection>
         <developerConnection>scm:git:git@github.com:cornerstonews/cornerstone-project.git</developerConnection>
         <url>https://github.com/cornerstonews/cornerstone-project</url>
-        <tag>cornerstone-project-1.2.0</tag>
+        <tag>cornerstone-project-1.2.1</tag>
     </scm>
 
     <distributionManagement>
