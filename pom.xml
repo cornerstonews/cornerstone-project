@@ -6,7 +6,7 @@
     <artifactId>cornerstone-project</artifactId>
     <packaging>pom</packaging>
     <name>cornerstone-project</name>
-    <version>1.2.0</version>
+    <version>1.2.1-SNAPSHOT</version>
     <description>Library to build Webservice project based on Jersey REST Framework</description>
 
     <scm>
@@ -29,7 +29,6 @@
         </snapshotRepository>
     </distributionManagement>
 
-<!--
     <modules>
         <module>../cornerstone-webservice</module>
         <module>../cornerstone-persistence</module>
@@ -43,6 +42,7 @@
         <module>../cornerstone-adb-websocket</module>
         <module>../cornerstone-adb-websocket-server</module>
     </modules>
+<!--
 -->
 
     <properties>
