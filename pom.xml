@@ -62,8 +62,8 @@
         <jakarta.xml.bind-api.version>2.3.3</jakarta.xml.bind-api.version>
         <moxy.version>2.7.11</moxy.version>
         <jsonp.ri.version>1.1.6</jsonp.ri.version>
-        <jackson-databind.version>2.13.3</jackson-databind.version>
-        <jackson-dataformat-yaml.version>2.13.3</jackson-dataformat-yaml.version>
+        <jackson-databind.version>2.13.4</jackson-databind.version>
+        <jackson-dataformat-yaml.version>2.13.4</jackson-dataformat-yaml.version>
         <hibernate-validator.version>6.2.4.Final</hibernate-validator.version>
         <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
 
